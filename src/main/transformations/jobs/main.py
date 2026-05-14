@@ -387,6 +387,17 @@ def main():
 
             logger.info("Staging table updated successfully with status I")
 
+        # Keep Spark session alive for manual inspection of Spark UI
+        if spark:
+            logger.info("=" * 80)
+            logger.info("Spark UI is available at: http://localhost:4040/jobs/")
+            logger.info("=" * 80)
+            user_input = input("Type 'close' to close the Spark session and exit: ").strip().lower()
+            while user_input != "close":
+                logger.warning(f"Invalid input: '{user_input}'. Please type 'close' to exit.")
+                user_input = input("Type 'close' to close the Spark session and exit: ").strip().lower()
+            logger.info("Closing Spark session as requested...")
+
     finally:
         if cursor:
             try:
