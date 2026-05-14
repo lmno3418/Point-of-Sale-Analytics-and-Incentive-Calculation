@@ -9,7 +9,7 @@ from src.main.write.database_write import DatabaseWriter
 def customer_mart_calculation_table_write(final_customer_data_mart_df):
     window = Window.partitionBy("customer_id","sales_date_month")
     final_customer_data_mart = final_customer_data_mart_df.withColumn("sales_date_month",
-                                           substring(col("sales_date"),1,7))\
+                                           to_date(concat(substring(col("sales_date"),1,7), lit("-01")), "yyyy-MM-dd"))\
                     .withColumn("total_sales_every_month_by_each_customer",
                                 sum("total_cost").over(window))\
                     .select("customer_id", concat(col("first_name"),lit(" "),col("last_name"))
