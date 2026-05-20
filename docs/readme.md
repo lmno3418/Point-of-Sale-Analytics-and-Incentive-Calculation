@@ -19,6 +19,7 @@ my_project/
 ├── resources/
 │   ├── __init__.py
 │   ├── dev/
+|   |    ├── .env
 │   │    ├── config.py
 │   │    └── requirement.txt
 │   └── qa/
@@ -53,7 +54,6 @@ my_project/
 │   │    │      └── upload_to_s3.py
 │   │    └── utility/
 │   │    │      ├── encrypt_decrypt.py
-│   │    │      ├── logging_config.py
 │   │    │      ├── s3_client_object.py
 │   │    │      ├── spark_session.py
 │   │    │      └── my_sql_session.py
