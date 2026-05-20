@@ -1,6 +1,4 @@
-Welcome to the show. This endeavor aims to provide you with insights into the functioning of projects within a real-time environment.
-
-The code has been meticulously crafted with careful consideration for various aspects. It not only nurtures your coding skills but also imparts a comprehensive comprehension of project structures.
+Welcome to the show. 
 
 Let's Start with requirement to complete the projects:-
 1. You should have laptop with minimum 4 GB of RAM, i3 and above (Better to have 8GB with i5).
